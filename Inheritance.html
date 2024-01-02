@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        INHERITANCE:
+     -->
+    <script>
+        class oldTrainer{
+            constructor(name){
+                this.name=name;
+            }
+            teach(){
+                console.log(this.name+" is the old trainer");
+            }
+        }
+
+        //Inheriting the constructors and methods from above class:
+
+        class newTrainer extends oldTrainer{
+            teach(){
+                console.log(this.name+" is the new trainer");
+            }
+        }
+
+        //Inheriting the constructors and methods from above class:
+
+        class nextTrainer extends newTrainer{
+            teach(){
+                console.log(this.name+" is the next trainer");
+            }
+        }
+
+        let oldtrainer = new oldTrainer("Manoj");
+        oldtrainer.teach();
+
+        let newtrainer = new newTrainer("Somesh");
+        newtrainer.teach();
+
+        let nexttrainer = new nextTrainer("Mohan");
+        nexttrainer.teach();
+
+
+    </script>
+</body>
+</html>

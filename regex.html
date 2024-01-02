@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <!-- 
+        Regex:
+
+
+
+
+
+        Literal Method:
+
+
+        Constructor Method:
+
+
+
+     -->
+    <script>
+
+        //Regex Literal Method:
+
+        var str1="Hello students, hello everyone, Hello all";
+
+        var regex1= /Hello/gi;
+
+        console.log(str1.match(regex1));
+
+        //Regex Constructor Method:
+
+        var regex2=new RegExp("ABc",'gi');
+
+        var str2= "abc,ABC,Abc,ABc";
+
+        console.log(str2.match(regex2));
+
+        //Dynamic Creating:
+
+        // const pat=prompt("Enter your Pattern");
+
+        // const regexpat =new RegExp(`${pat}`,'gi');
+
+        // const str3 = "xyz,Xyz,XYZ,xyZ";
+
+        // console.log(str3.match(regexpat));
+  
+        //Special Characters:
+        //      Anchors: ^, $
+
+        const rege1 = /^Cat/i;
+
+        console.log(rege1.test("cat and mouse"));
+
+        const rege2 = /Cat$/i;
+
+        console.log(rege2.test("Mouse and cat"));
+
+        //      Boundaries: b and B
+
+        const reg1 = /ward\b/ig;
+
+        const str4 = "backward wardrobe ward";
+
+        console.log(str4.match(reg1));
+
+        // Character Class:
+
+        const reg2 = /wom[ae]n/;
+
+        console.log(reg2.test("woman"));
+
+        //Negateed character class:
+
+        const reg3 = /wom[^ae]n/;
+
+        console.log(reg2.test("woman"));
+
+        //Range:
+
+        const  reg4 = /1-100/;
+
+        const  reg5 = /a-z/;
+
+        //Alternation:
+
+        const regex = /(Somesh|Ramesh)\sKumar/;
+        console.log(regex.test("Somesh Kumar"));
+        console.log(regex.test("Ramesh Kumar"));
+
+        //Quantifiers:
+
+        const reg6 = /hel+o/;
+        console.log(reg6.test("hellllllllllllo"));
+
+        const reg7 = /hel*o/;
+        console.log(reg7.test("heo"));
+
+        let reg8 = /colou?r/;
+        console.log(reg8.test("color"));
+        console.log(reg8.test("colour"));
+
+        // {N}
+
+        // {n, } or {min, }
+
+        // {,m} or {,max}
+
+        // {n,m} or {min,max}
+
+         
+
+
+
+
+
+
+    </script>
+</body>
+</html>

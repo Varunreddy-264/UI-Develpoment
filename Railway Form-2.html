@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        RAILWAY FORM 2 USING CONSTRUCTOR:
+     -->
+     <script>
+        class Railwayform{
+            constructor(name,trainno,address){
+                this.name=name;
+                this.trainno=trainno;
+                this.address=address;
+            }
+            preview(){
+                alert(this.name+": Your form has been submitted for the trainno: "+this.trainno +" and your destination address will be: "+this.address+", is this correct?");
+            }
+            submit(){
+                alert(this.name+": Your form has been submitted for the trainno: "+this.trainno +" and your destination address will be: "+this.address);
+            }
+            cancel(){
+                alert(this.name+": Your form has been cancelled for the trainno: "+this.trainno +" and your destination address will be: "+this.address);
+            }
+        }
+        let varunForm = new Railwayform("Varun","264","Hyderabad");
+        varunForm.preview();
+        varunForm.submit();
+        varunForm.cancel();
+        
+     </script>
+</body>
+</html>

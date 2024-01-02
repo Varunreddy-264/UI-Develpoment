@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        OOPS:
+            -> Data Abstraction
+            -> Encapsulation
+            -> Inheritance
+            -> Polymorphism
+
+
+            In below example we have worked on abstraction and encapsulation.
+            we have not showing the unnecessary details to the user.
+            also we have encapsulated the constructor , methods in a single class.
+
+            In the next example we have worked on inheritance and polymorphism.
+            we are inherting the porperties or objects or constructor from the above class.
+            we are calling the one method but we are getting different output each timee that's cause we are using 
+            polymorphism.
+    -->
+    <script>
+
+        //ABSTRACTION & ENCAPSULATION:
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            getName() {
+                return this.name;
+            }
+            getAge() {
+                return this.age;
+            }
+        }
+        const person1 = new Person("Varun", 20);
+
+        console.log(person1.getName());
+        console.log(person1.getAge());
+
+        //INHERITANCE & POLYMORPHISM:
+        class Animal {
+            constructor(name) {
+                this.name = name;
+            }
+            speak() {
+                console.log(this.name + " makes a noise");
+            }
+
+        }
+
+        class Dog extends Animal{
+            speak(){
+                console.log(this.name + " barks");
+            }
+        }
+        class Cat extends Animal{
+            speak(){
+                console.log(this.name + " meows");
+            }
+        }
+
+        const animal = new Animal("dog");
+        const dog=new Dog("Tommy");
+        const cat=new Cat("Bella");
+
+        animal.speak();
+        dog.speak();
+        cat.speak();
+
+    </script>
+</body>
+
+</html>

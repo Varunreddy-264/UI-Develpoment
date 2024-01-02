@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling & Capturing</title>
+</head>
+<style>
+    div{
+        border: 2px solid green;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+<body>
+    <!-- 
+        Event Bubbling & Capturing:
+            EVENT BUBBLING:
+                    Event bubbling performs bottom-top approach same like bubble.
+                    if we trigger an element with a element every element is triggered.
+                    to stop this we use stopPropogation method.
+        
+            EVENT CAPTURING:
+                    Event Capturing is opposite to event bubblilng. it performs top-bottom approach,
+                    defaulty everything performs as a event bubbling. but we can dynamically change it into 
+                    event capturing. basically addEventListener ha two parameters, first one is event to be done
+                    second is function, and we add third one which is "FALSE" which performs nothing there is no change
+                    but we change the false into "TRUE". now it makes event bubbling into event capturing.
+     -->
+
+     <div id="e1">
+        1<div id="e2">
+            2<div id="e3">
+                3</div>
+        </div>
+    </div>
+     <script>
+        //EVENT BUBBLING:
+        document.getElementById("e1").addEventListener("click",()=>{
+            alert("Parent is clicked");
+        })
+
+        document.getElementById("e2").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("Child is clicked");
+        })
+
+        document.getElementById("e3").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("Grand Child is clicked");
+        })
+        //EVENT CAPTURING:
+        // document.getElementById("e1").addEventListener("click",(e)=>{
+        //     e.stopPropagation();
+        //     alert("Parent is clicked");
+        // },true)
+
+        // document.getElementById("e2").addEventListener("click",(e)=>{
+        //     e.stopPropagation();
+        //     alert("Child is clicked");
+        // },true)
+
+        // document.getElementById("e3").addEventListener("click",(e)=>{
+        //     e.stopPropagation();
+        //     alert("Grand Child is clicked");
+        // })
+     </script>
+</body>
+</html>

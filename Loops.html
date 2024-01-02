@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <!-- Loops in JS
+            - for loop
+                    syntax: 
+                        for(initialization, condition, increment/decrement){
+                            //statement or block of code
+                        }
+            - while loop
+                    syntax:
+                        while(condition){
+                           //statement or block of code
+                           increment/decrement
+                        }
+            - do while loop
+                    syntax:
+                        do{
+                            //statement or block of code
+                            increment/decrement
+                        }while(condition)
+    -->
+
+        <!-- <select name="year" id="year">
+        <option value="-select-">-select-</option>        
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2004">2004</option>
+        <option value="2005">2005</option>
+        <option value="2006">2006</option>
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        </select> -->
+
+        <select name="Day" id="Day"></select>
+        <select name="Month" id="Month"></select>
+        <select name="Year" id="Year"></select>
+    <script>
+
+            // let num1;
+            // for(num1=0; num1<=10; ++num1){
+            //     document.write(num1+"<br>");
+            // }
+
+            // let num2 = 1;
+            // while(num2<=20){
+            //     document.write(num2+"<br>");
+            //     num2++;
+            // }
+
+            // let num3 = 1;
+            // do{
+            //     document.write(num3+"<br>");
+            //     num3++;
+            // }while(num3<=25);
+
+// ----------------------------------------------------------------------------------------------------------
+
+            // TABLES
+            
+            // let num4;
+            // for(num4=2;num4<=20;num4+=2){
+            //     document.write(num4+"<br>");
+            // }
+
+            // let num5 = 3;
+            // while(num5<=30){
+            //     document.write(num5+"<br>");
+            //     num5+=3;
+            // } 
+
+            // let num6 = 4;
+            // do{
+            //     document.write(num6+"<br>");
+            //     num6+=4;
+            // }while(num6<=40)
+
+//---------------------------------------------------------------------------------------------------------------
+
+            // var opt1 = "<option>Year</option>";
+            // for(i=1950;i<=2023;i++){
+            //     opt1 += "<option value = " + i + ">" + i + "</option>";
+            //     document.getElementById("Year").innerHTML=opt1;
+            // }
+            // var opt2 = "<option>Month</option>";
+            // for(j=1;j<=12;j++){
+            //     opt2 += "<option value = " + j + ">" + j + "</option>";
+            //     document.getElementById("Month").innerHTML=opt2;
+            // }
+            // var opt3 = "<option>Day</option>";
+            // for(k=1;k<=31;k++){
+            //     opt3 += "<option value = " + k + ">" + k + "</option>";
+            //     document.getElementById("Day").innerHTML=opt3;
+            // }
+
+            // var opt4 = "<option>Year</option>";
+            // var k=2000;
+            // while(k<=2023){
+            //     opt4 += "<option value = " + k + ">" + k + "</option>";
+            //     k++;
+            //     document.getElementById("Year").innerHTML=opt4;
+            // }   
+            
+            // var opt5 = "<option>Month</option>";
+            // var l=1;
+            // while(l<=12){
+            //     opt5 += "<option value = " + l + ">" + l + "</option>";
+            //     l++;
+            //     document.getElementById("Month").innerHTML=opt5;
+            // }
+
+            // var opt6 = "<option>Day</option>";
+            // var m=1;
+            // while(m<=31){
+            //     opt6 += "<option value = " + m + ">" + m + "</option>";
+            //     m++;
+            //     document.getElementById("Day").innerHTML=opt6;
+            // }
+
+            do{
+                var opt7 = "<option>Year</option>";
+                var n = 2000;
+                opt7 += "<option value = " + n + ">" + n + "</option>";
+                n++;
+            }while(n<=2023);
+
+            do{
+                var opt8 = "<option>Month</option>";
+                var o = 12;
+                opt8 += "<option value = " + o + ">" + o + "</option>";
+                o++;
+            }while(o<=12);
+
+            do{
+                var opt9 = "<option>Day</option>";
+                var p = 31;
+                opt9 += "<option value = " + p + ">" + p + "</option>";
+                p++;
+            }while(p<=31);
+
+
+    </script>
+</body>
+</html>

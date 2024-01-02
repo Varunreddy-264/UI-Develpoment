@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in JS</title>
+</head>
+<style>
+    .box1{
+        border: 1px solid red;
+        background-color: pink;
+        padding: 10px;
+        padding-left: 0px;
+    }
+    .box2{
+        border: 1px solid darkgreen;
+        background-color: yellow;
+        padding: 10px;
+        padding-left: 0px;
+    }
+</style>
+<body>
+    <!-- 
+        Selectors in JS:
+            -getElementsByTagName()
+            -getElementsByClassName()
+            -getElementById()
+            -querySelector()
+            -querySelectorAll()
+     -->
+     <div id="smt">HTML</div>
+     <section class="box2">CSS</section>
+     <div id="smt">Bootstrap</div>
+     <section class="box2">Javascript</section>
+     <div id="smt">React</div>
+
+     <script>
+
+        //GET ELEMENT BY TAG NAME: 
+
+        // document.getElementsByTagName("div")[0].style.border="1px solid red";
+        // document.getElementsByTagName("div")[1].style.border="1px solid red";
+        // document.getElementsByTagName("div")[2].style.border="1px solid red";
+
+        // document.getElementsByTagName("div")[0].style.backgroundColor="yellow";
+        // document.getElementsByTagName("div")[1].style.backgroundColor="yellow";
+        // document.getElementsByTagName("div")[2].style.backgroundColor="yellow";
+
+
+        // Giving different properties using classlist:
+
+        document.getElementsByTagName("section")[0].classList="box1";
+        document.getElementsByTagName("section")[1].classList="box1";
+
+        // // Using Loops:
+
+        let divlist=document.getElementsByTagName("div");
+        for(let i=0;i<divlist.length;i++){
+            divlist[i].classList="box2";
+        }
+
+        // GET ELEMENT BY CLASS NAME:
+
+        let classList=document.getElementsByClassName("box2");
+        for(let i=0;i<classList.length;i++){
+            classList[i].style.backgroundColor="orange";
+        }
+
+        // // GET ELEMENT BY ID:
+        document.getElementById("smt").style.color="blue";
+
+        // QUERY SELECTOR:
+
+        document.querySelector("#smt").style.color="red";
+        document.querySelector(".box1").style.color="white";
+
+        let quer=document.querySelectorAll("div.box1");
+        for(let i=o;i<quer.length;i++){
+            quer[i].style.backgroundColor="green";
+        }
+
+
+
+
+     </script>
+
+
+
+
+
+
+</body>
+</html>

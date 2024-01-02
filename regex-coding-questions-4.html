@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Coding</title>
+</head>
+<body>
+    <label for="pwd">Password:</label>
+    <input type="text" id="pwd" name="pwd" placeholder="Enter Your Password">
+
+    <button onclick=pwdRegex()>Verify</button>
+    <p id="output"></p>
+
+    <script>
+        function pwdRegex(){
+            const pwdInput = document.getElementById("pwd").value;
+            // const pwdregexPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=])[A-Za-z\d!@#$%^&*()_+-=]{8,16}/;
+            const pwdregexPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W_]).{8,16}$/;
+
+            if(!pwdregexPattern.test(pwdInput)){
+                document.getElementById("output").innerHTML="Invalid Password Pattern";
+                document.getElementById("output").style.color="red";
+            }
+            else{
+                document.getElementById("output").innerHTML="Password Generated Successfully";
+                document.getElementById("output").style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

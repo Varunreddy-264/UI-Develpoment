@@ -1,0 +1,301 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Nov-22</title>
+    <style>
+        img{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create a table dynamically using JS -->
+    <!-- <table border="1">
+        <thead>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Profile Photo</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>SSMB</td>
+                <td>49</td>
+                <td>Gunturodu28@gmail.com</td>
+                <td><img src="./SSMB.jpg" alt="A Cool guy wearing Goggles"></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Al Pacino</td>
+                <td>78</td>
+                <td>GodFather78@gmail.com</td>
+                <td><img src="./AP.jpg" alt="God Father leaning on his hand"></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Brad Pitt</td>
+                <td>58</td>
+                <td>TylerDurden58@gmail.com</td>
+                <td><img src="./BP.jpg" alt="Brad Smillimg at a cameraman"></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Rober De Niro</td>
+                <td>75</td>
+                <td>GoodFella75@gmail.com</td>
+                <td><img src="./RDN.jpg" alt="Robert looking like he's gonna kill you in a minute"></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Bryan Cranston</td>
+                <td>63</td>
+                <td>HeisenbergMethGod@gmail.com</td>
+                <td><img src="./BC.jpg" alt="Meth God posing for a photo"></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Keanu Reeves</td>
+                <td>59</td>
+                <td>JohnWick|AKA|BabaYaga@gmail.com</td>
+                <td><img src="./john-wick.jpg" alt="John is ready to send your soul to heaven or hell in a second"></td>
+            </tr>
+        </tbody>
+    </table> -->
+    <script>
+        let table=document.createElement("table");
+        table.setAttribute("border","1px");
+
+        let thead=document.createElement("thead");
+
+        let th1=document.createElement("th");
+        let txt1=document.createTextNode("S.No");
+        th1.appendChild(txt1);
+        let th2=document.createElement("th");
+        let txt2=document.createTextNode("Name");
+        th1.appendChild(txt2);
+        let th3=document.createElement("th");
+        let txt3=document.createTextNode("Age");
+        th1.appendChild(txt3);
+        let th4=document.createElement("th");
+        let txt4=document.createTextNode("Email");
+        th1.appendChild(txt4);
+        let th5=document.createElement("th");
+        let txt5=document.createTextNode("Profile Photo");
+        th1.appendChild(txt5);
+
+        th1.appendChild(txt1);
+        th2.appendChild(txt2);
+        th3.appendChild(txt3);
+        th4.appendChild(txt4);
+        th5.appendChild(txt5);
+
+        thead.appendChild(th1);
+        thead.appendChild(th2);
+        thead.appendChild(th3);
+        thead.appendChild(th4);
+        thead.appendChild(th5);
+
+        let tbody=document.createElement("tbody");
+
+// TR1:
+
+        let tr1=document.createElement("tr");
+
+        let td1=document.createElement("td");
+        let txt6=document.createTextNode(1);
+        td1.appendChild(txt6);
+        let td2=document.createElement("td");
+        let txt7=document.createTextNode("SSMB");
+        td2.appendChild(txt7);
+        let td3=document.createElement("td");
+        let txt8=document.createTextNode(49);
+        td3.appendChild(txt8);
+        let td4=document.createElement("td");
+        let txt9=document.createTextNode("Gunturodu28@gmail.com");
+        td4.appendChild(txt9);
+        let td5=document.createElement("td");
+        let img1=document.createElement("img");
+        let alt1=document.createElement("alt");
+        img1.setAttribute("src","./SSMB.jpg");
+        img1.setAttribute("alt","A Cool guy wearing Goggles");
+        td5.appendChild(img1);
+
+        tr1.appendChild(td1);
+        tr1.appendChild(td2);
+        tr1.appendChild(td3);
+        tr1.appendChild(td4);
+        tr1.appendChild(td5);
+
+        // console.log(tr1);
+
+// TR2:
+
+        let tr2 = document.createElement("tr");
+
+        let td6=document.createElement("td");
+        let txt11=document.createTextNode(2);
+        td6.appendChild(txt11);
+        let td7=document.createElement("td");
+        let txt12=document.createTextNode("Al Pacino");
+        td7.appendChild(txt12);
+        let td8=document.createElement("td");
+        let txt13=document.createTextNode(78);
+        td8.appendChild(txt13);
+        let td9=document.createElement("td");
+        let txt14=document.createTextNode("GodFather78@gmail.com");
+        td9.appendChild(txt14);
+        let td10=document.createElement("td");
+        let img2=document.createElement("img");
+        let alt2=document.createElement("alt");
+        img2.setAttribute("src","./AP.jpg");
+        img2.setAttribute("alt","God Father leaning on his hand");
+        td10.appendChild(img2);
+
+        tr2.appendChild(td6);
+        tr2.appendChild(td7);
+        tr2.appendChild(td8);
+        tr2.appendChild(td9);
+        tr2.appendChild(td10);
+
+        // console.log(tr2);
+
+// TR3:
+        let tr3 = document.createElement("tr");
+
+        let td11=document.createElement("td");
+        let txt15=document.createTextNode(3);
+        td11.appendChild(txt15);
+        let td12=document.createElement("td");
+        let txt16=document.createTextNode("Brad Pitt");
+        td12.appendChild(txt16);
+        let td13=document.createElement("td");
+        let txt17=document.createTextNode(58);
+        td13.appendChild(txt17);
+        let td14=document.createElement("td");
+        let txt18=document.createTextNode("TylerDurden58@gmail.com");
+        td14.appendChild(txt18);
+        let td15=document.createElement("td");
+        let img3=document.createElement("img");
+        let alt3=document.createElement("alt");
+        img3.setAttribute("src","./BP.jpg");
+        img3.setAttribute("alt","Brad Smillimg at a cameraman");
+        td15.appendChild(img3);
+
+        tr3.appendChild(td11);
+        tr3.appendChild(td12);
+        tr3.appendChild(td13);
+        tr3.appendChild(td14);
+        tr3.appendChild(td15);
+
+        // console.log(tr3);
+
+// TR4:
+
+        let tr4 = document.createElement("tr");
+
+        let td16=document.createElement("td");
+        let txt19=document.createTextNode(4);
+        td16.appendChild(txt19);
+        let td17=document.createElement("td");
+        let txt20=document.createTextNode("Robert De Niro");
+        td17.appendChild(txt20);
+        let td18=document.createElement("td");
+        let txt21=document.createTextNode(75);
+        td18.appendChild(txt21);
+        let td19=document.createElement("td");
+        let txt22=document.createTextNode("GoodFella75@gmail.com");
+        td19.appendChild(txt22);
+        let td20=document.createElement("td");
+        let img4=document.createElement("img");
+        let alt4=document.createElement("alt");
+        img4.setAttribute("src","./RDN.jpg");
+        img4.setAttribute("alt","Robert looking like he's gonna kill you in a minute");
+        td20.appendChild(img4);
+
+        tr4.appendChild(td16);
+        tr4.appendChild(td17);
+        tr4.appendChild(td18);
+        tr4.appendChild(td19);
+        tr4.appendChild(td20);
+
+        // console.log(tr4);
+
+// TR5:
+
+        let tr5 = document.createElement("tr");
+
+        let td21=document.createElement("td");
+        let txt23=document.createTextNode(5);
+        td21.appendChild(txt23);
+        let td22=document.createElement("td");
+        let txt24=document.createTextNode("Bryan Cranston");
+        td22.appendChild(txt24);
+        let td23=document.createElement("td");
+        let txt25=document.createTextNode(63);
+        td23.appendChild(txt25);
+        let td24=document.createElement("td");
+        let txt26=document.createTextNode("HeisenbergMethGod@gmail.com");
+        td24.appendChild(txt26);
+        let td25=document.createElement("td");
+        let img5=document.createElement("img");
+        let alt5=document.createElement("alt");
+        img5.setAttribute("src","./BC.jpg");
+        img5.setAttribute("alt","Meth God posing for a photo");
+        td25.appendChild(img5);
+
+        tr5.appendChild(td21);
+        tr5.appendChild(td22);
+        tr5.appendChild(td23);
+        tr5.appendChild(td24);
+        tr5.appendChild(td25);
+
+        // console.log(tr5);
+
+// TR6:
+        let tr6 = document.createElement("tr");
+
+        let td26=document.createElement("td");
+        let txt27=document.createTextNode(6);
+        td26.appendChild(txt27);
+        let td27=document.createElement("td");
+        let txt28=document.createTextNode("Keanu Reeves");
+        td27.appendChild(txt28);
+        let td28=document.createElement("td");
+        let txt29=document.createTextNode(59);
+        td28.appendChild(txt29);
+        let td29=document.createElement("td");
+        let txt30=document.createTextNode("JohnWick|AKA|BabaYaga@gmail.com");
+        td29.appendChild(txt30);
+        let td30=document.createElement("td");
+        let img6=document.createElement("img");
+        let alt6=document.createElement("alt");
+        img6.setAttribute("src","./john-wick.jpg");
+        img6.setAttribute("alt","John is ready to send your soul to heaven or hell in a second");
+        td30.appendChild(img6);
+
+        tr6.appendChild(td26);
+        tr6.appendChild(td27);
+        tr6.appendChild(td28);
+        tr6.appendChild(td29);
+        tr6.appendChild(td30);
+
+        // console.log(tr6);
+
+        table.appendChild(thead);
+        table.appendChild(tr1);
+        table.appendChild(tr2);
+        table.appendChild(tr3);
+        table.appendChild(tr4);
+        table.appendChild(tr5);
+        table.appendChild(tr6);
+
+        // console.log(table);
+
+        document.querySelector("body").appendChild(table);
+
+    </script>
+</body>
+</html>

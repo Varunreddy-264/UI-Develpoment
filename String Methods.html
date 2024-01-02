@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods in JS</title>
+</head>
+<body>
+    <!--
+        String Methods in JS:
+            -Length
+            -indexOf()
+            -lastIndexOf()
+            -substring()
+            -toUpperCase()
+            -toLowerCase()
+            -replace()
+            -replaceAll()
+            -charAt()
+            -concat()
+            -slice()
+            -split()
+            -trim()
+            -repeat()
+            
+     -->
+    <script>
+
+        // LENGTH
+        var name="Varun Reddy";
+        console.log(name.length);
+
+        // INDEXOF()
+        var name="Varun Reddy";
+        console.log(name.indexOf("R"));
+
+        // LASTINDEXOF()
+        var greet = "Hello All,Hello Students";
+        console.log(greet.lastIndexOf("Hello"));
+
+        // SUBSTRING()
+        var name="Varun Reddy";
+        console.log(name.substring(1,7));
+
+        // TOUPPERCASE()
+        var name="Varun Reddy";
+        console.log(name.toUpperCase());
+
+        // TOLOWERCASE()
+        var name="VARUN REDDY";
+        console.log(name.toLowerCase());
+
+        // REPLACE()
+        var name="Varun Reddy";
+        var rpl=name.replace("Varun","Nachi");
+        console.log(rpl);
+
+        // REPLACEALL()
+        var greet = "Hello All,Hello Students";
+        var newgreet=greet.replaceAll("Hello","Hlo")
+        console.log(newgreet);
+
+        // CHARAT()
+        var name="Varun Reddy";
+        console.log(name.charAt(6));
+
+        // CONCAT()
+        var firstName = "Varun Reddy";
+        var LastName = "Nachi Reddy";
+        console.log(firstName.concat(LastName));
+        console.log(firstName+" "+LastName);
+
+        // SLICE()
+        var name="Varun Reddy";
+        console.log(name.slice(3,8));
+
+        // SPLIT()
+        var name="Varun Reddy";
+        console.log(name.split(" "));
+
+        // TRIM()
+        var name="    Varun Reddy    ";
+        console.log(name.trim());
+        // TRIMEND()
+        var name="    Varun Reddy    ";
+        console.log(name.trimEnd());
+        // TRIMSTART()
+        var name="    Varun Reddy    ";
+        console.log(name.trimStart());
+
+        // REPEAT()
+        var name="varun reddy ";
+        console.log(name.repeat(3));
+
+
+
+    </script>
+</body>
+</html>

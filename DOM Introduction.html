@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Introduction</title>
+</head>
+<style>
+    div{
+        border: 2px solid green;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- 
+        DOM INTRODUCTION:
+        The DOM provides a way for scripts to dynamically access and manipulate the content,
+        structure, and style of a document.
+        
+
+
+        we use innerHTML,innerText,textContent to change the data dynamically in web page
+        all three of them are same in work.
+     -->
+
+    <!-- <div id="P">
+        <button id="C1">Click Me 1</button>
+        <button id="C2">Click Me 2</button>
+    </div> -->
+
+    <div id="e1">
+        1<div id="e2">
+            2<div id="e3">
+                3</div>
+        </div>
+    </div>
+    <script>
+        // document.getElementById("P").addEventListener("click", () => {
+        //     alert("Parent is clicked");
+        // })
+
+        // document.getElementById("C1").addEventListener("click", () => {
+        //     alert("Child 1 is Clicked");
+        // })
+
+        // document.getElementById("C2").addEventListener("click", () => {
+        //     alert("Child 2 is clicked");
+        // })
+
+        document.getElementById("e1").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("Parent is clicked");
+        },true)
+
+        document.getElementById("e2").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("Child is clicked");
+        },true)
+
+        document.getElementById("e3").addEventListener("click",(e)=>{
+            e.stopPropagation();
+            alert("Grand Child is clicked");
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Nov-21</title>
+</head>
+<style>
+    input ,#num1,#num2{
+        padding: 5px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <input type="number" id="num1"><br><br>
+    <input type="number" id="num2"><br><br>
+    <input type="button" name="Calculate Now" id="total" value="Calculate Now">
+    <p id="sum"></p>
+
+    <script>
+        document.getElementById("total").addEventListener("click",()=>{
+            let n1,n2;
+            n1 = document.getElementById("num1").value;
+            n2 = document.getElementById("num2").value;
+            let sum = n1 + n2;
+
+            document.getElementById("sum").innerHTML= `The sum of ${n1} and ${n2} is ${sum}`;
+        })
+        
+    </script>
+</body>
+</html>

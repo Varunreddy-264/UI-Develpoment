@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        RAILWAY FORM 1 USING FILL METHOD:
+     -->
+     <script>
+        class Railwayform{
+            fill(name,trainno){
+                this.name=name;
+                this.trainno=trainno;
+            }
+            submit(){
+                alert(this.name+": Your form has been submitted for trainno: "+this.trainno);
+            }
+            cancel(){
+                alert(this.name+": Your form has been cancelled for trainno: "+this.trainno);
+            }
+        }
+
+        //For user name Varun:
+        let varunForm = new Railwayform();
+        varunForm.fill("Varun","264");
+        varunForm.submit();
+        varunForm.cancel();
+
+        //For user name Reddy:
+        let reddyForm = new Railwayform();
+        reddyForm.fill("Reddy","45");
+        reddyForm.submit();
+        reddyForm.cancel();
+
+
+
+
+
+     </script>
+</body>
+</html>

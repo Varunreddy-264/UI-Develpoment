@@ -1,0 +1,89 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validations</title>
+</head>
+<style>
+    h1 {
+        color: blue;
+    }
+
+    div {
+        border: 1px solid blue;
+        width: 200px;
+        border-radius: 20px;
+        padding: 100px;
+    }
+
+    form input {
+        padding: 6px;
+        border-radius: 10px;
+    }
+
+    form label,
+    input {
+        margin: 5px;
+    }
+
+    label span {
+        color: red;
+    }
+
+    .dNone {
+        color: red;
+        display: none;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Login From:</h1>
+        <h3>
+            <form>
+                <label for="email">Email: <span>*</span></label>
+                <input type="email" id="email" placeholder="Enter Your Email">
+                <span class="dNone" id="eErr">Please Enter Your Email</span>
+
+                <label for="password">Password: <span>*</span></label>
+                <input type="password" id="password" placeholder="Ente Your Password">
+                <span class="dNone" id="pErr">Please Enter Your Password</span>
+
+                <input type="button" name="Login" value="login" id="login">
+            </form>
+        </h3>
+        <h4>Forgot Password? <a href="#"><br>Click Here!</a><br></h4>
+        <h4>Don't have an account? <a href="#"><br>Create One!</a></h4>
+    </div>
+    <script>
+        document.getElementById("login").addEventListener("click",function(){
+
+            let email,password;
+
+            email=document.getElementById("email").value;
+            password=document.getElementById("password").value;
+
+            if(email == ""){
+                document.getElementById("eErr").style.display="block";
+            }else{
+                document.getElementById("eErr").style.display="none";
+            }
+
+            if(password == ""){
+                document.getElementById("pErr").style.display="block";
+            }else{
+                document.getElementById("pErr").style.display="none";
+            }
+
+            if(email !== "" && password !== ""){
+                alert("Logged in Successfully");
+            }
+        })
+    </script>
+</body>
+
+</html>

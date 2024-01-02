@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2</title>
+</head>
+<style>
+    img{
+        height: 500px;
+    }
+</style>
+<body>
+
+    <!-- DOM METHODS:
+            HTML DOM methods are actions you can perform (on HTML Elements).
+                
+        createElement():This method is used to create elements(tags,attributes)
+                        dynamically using javascript.
+            Syntax: document.createElement(type);
+
+        setAttribute():The setAttribute() method sets a new value to an attribute.
+            Syntax:element.setAttribute(name, value);
+        
+        createTextNode():The createTextNode() method creates a text node.
+            Syntax:document.createTextNode(text);
+
+        appendChild:The appendChild() method appends a node (element) as the last child of an element.
+            Syntax:element.appendChild(node);
+    -->
+
+
+    <!-- Example to create this using JS:
+        
+    <figure>
+        <img src="./SSMB.jpg" alt="A cool guy wearing goggles">
+        <figcaption>SUPER STAR MAHESH BABU</figcaption>
+    </figure> -->
+
+    <script>
+
+        // How to create HTML Content dynamically using Javascript:
+
+        // Create figure tag dynamically:
+        let fig=document.createElement("figure");
+
+        // Create img tag dynamically:
+        let img=document.createElement("img");
+
+        // Set attributes to img tag:
+        img.setAttribute("src","./SSMB.jpg");
+        img.setAttribute("alt","A cool guy wearing goggles");
+
+        // Create figcaption tag dynamically:
+        let figcap=document.createElement("figcation");
+        // add text into figcaption:
+        let txt=document.createTextNode("SUPER STAR MAHESH BABU");
+
+        // Append figcaption in figcap:
+        figcap.appendChild(txt);
+
+        // Append img and figcap tags in fig tag:
+        fig.appendChild(img);
+        fig.appendChild(figcap);
+
+        // Append fig tag in body tag:
+        document.getElementsByTagName("body")[0].appendChild(fig);
+
+        console.log(fig);
+        
+        
+    </script>
+</body>
+</html>

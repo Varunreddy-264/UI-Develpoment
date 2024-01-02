@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage Techniques</title>
+</head>
+<body>
+    <!-- 
+        Data Types:
+            -Strings
+            -Numbers
+            -Boolean
+            -Undefined
+            -Null
+            -Arrays
+            -Objects
+            -Array of Objects
+
+        Data Storage Techniques:
+            -Strings
+            -Arrays
+            -Objects
+            -Array of Objects
+    -->
+
+    <script>
+
+        // STRING
+        // String Literal Method Declaration
+
+        var name1 = "Varun Reddy";
+        document.write(name1 +"<br>");
+        document.write(typeof name1 +"<br>");
+
+        // String Construtor Method Declaration
+
+        var name2 = new String("varun reddy");
+        document.write(name2 +"<br>");
+        document.write(typeof name2 +"<br>");
+
+        // ARRAY
+        // Array Literal Method Declaration
+
+        var friends1=["Varun","Vinay","Vijay","Yatheesh"];
+        document.write(friends1 +"<br>");
+        document.write(typeof friends1 +"<br>");
+        document.write(friends1[0] +"<br>");
+
+        // Array Constructor Method Declaration
+
+        var friends2=new Array ("VaruN","VinaY","VijaY","YatheesH");
+        document.write(friends2 +"<br>");
+        document.write(typeof friends2 +"<br>");
+
+        // Retrieval Of Data:
+
+        document.write(friends2[0] +"<br>");
+        document.write(friends2[1] +"<br>");
+        document.write(friends2[2] +"<br>");
+        document.write(friends2[3] +"<br>");
+
+        // Retrieval Of Data using loops:
+
+        document.write("<h2>Array Retrieval of data using loops:</h2>");
+        for(let i=0; i<=3; i++){
+            document.write(friends2[i]+"<br>");
+        }
+
+        document.write("<h2>Array Retrieval of data using length method in loops:</h2>");
+        for(let i=0; i<friends2.length; i++){
+            document.write(friends2[i]+"<br>");
+        }
+
+        // OBJECT
+        // Object Literal Method Declaration
+        var student={
+            name:"Varun",
+            id:45,
+            age:20,
+            gender:"male",
+            course:"Front End"
+        }
+        document.write(typeof student);
+        // Retrieval Of Data manually:
+        document.write("<h2>OBJECT Retrieval of data manually:</h2>");
+        document.write(student.name+"<br>");
+        document.write(student.id+"<br>");
+        document.write(student.gender+"<br>");
+        document.write(student.course+"<br>");
+        
+        // Retrieval Of Data using loops:
+        document.write("<h2>OBJECT Retrieval of data using loops:</h2>");
+        for(let des in student){
+            document.write(des+"<br>");
+        }
+        for(let des in student){
+            document.write(student[des]+"<br>");
+        }
+
+        // ARRAY OF OBJECTS
+
+        var students=[{
+            name:"Varun",
+            id:45,
+            age:20,
+            gender:"male",
+            course:"Front End"
+        },
+        {
+            name:"Vinay",
+            id:46,
+            age:21,
+            gender:"male",
+            course:"React JS"
+        },
+        {
+            name:"Vijay",
+            id:47,
+            age:22,
+            gender:"male",
+            course:"Front End"
+        },
+        {
+            name:"Yatheesh",
+            id:48,
+            age:23,
+            gender:"male",
+            course:"React JS"
+        }
+    ];
+    document.write(typeof students);
+
+        // Retrieval Of Data manually:
+        document.write("<h2>Array of Object Retrieval of data manually:</h2>");
+        document.write(students[0].name+"<br>");
+        document.write(students[1].name+"<br>");
+        document.write(students[2].name+"<br>");
+        document.write(students[3].name+"<br>");
+        document.write(students[0].course+"<br>");
+        document.write(students[1].course+"<br>");
+        document.write(students[2].course+"<br>");
+        document.write(students[3].course+"<br>");
+
+
+        // Retrieval Of Data using loops:
+        document.write("<h2>Array of Object Retrieval of data using loops:</h2>");
+        
+        for(let j=0;j<students.length;j++){
+            document.write(students[j].name+"<br>");
+            document.write(students[j].id+"<br>");
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

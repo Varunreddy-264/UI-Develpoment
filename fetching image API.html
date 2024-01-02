@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching image API</title>
+</head>
+<body>
+    <!-- 
+        Fetching image API and present in table:
+     -->
+     <h1>Fetching Image API</h1>
+     <button id="buttonClick">Fetch Now</button>
+     <img id="image">
+     <section>
+        <div></div>
+        <div></div>
+        <div></div>        
+     </section>
+
+     <script>
+        let btn=document.getElementById("buttonClick");
+        let image=document.getElementById("image");
+
+        btn.addEventListener("click",function(){
+
+        fetch("https://dog.ceo/api/breeds/image/random")
+        .then(response=>response.json())
+        .then(data=>{
+            console.log(data);
+            image.src=data.message;
+        })
+        .catch(error=>console.log("An error occured: "+error))
+
+        })
+
+
+
+
+
+
+     </script>
+</body>
+</html>

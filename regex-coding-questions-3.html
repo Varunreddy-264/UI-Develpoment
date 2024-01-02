@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Coding</title>
+</head>
+<body>
+    <label for="pan">PAN No:</label>
+    <input type="text" id="pan" name="pan" placeholder="Enter Your PAN Number">
+
+    <button onclick=validatePan()>Verify</button>
+    <p id="output"></p>
+
+    <script>
+        function validatePan(){
+            const panInput = document.getElementById("pan").value;
+            const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+
+            if(!panRegex.test(panInput)){
+                document.getElementById("output").innerHTML="Invalid PAN Number";
+                document.getElementById("output").style.color="red";
+            }
+            else{
+                document.getElementById("output").innerHTML="Valid PAN Number";
+                document.getElementById("output").style.color="green";
+            }
+        }
+
+
+        //Filtering Hashtags:
+
+        function filteringHashtags(text){
+
+            const hashtagPattern = /#\w+/g;
+            return text.match(hashtagPattern) || [];
+        }
+        const text = "I am #learning #javascript #react";
+
+        console.log(filteringHashtags(text));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex coding</title>
+</head>
+<body>
+    <label for="aadhaar">Aadhaar No:</label>
+    <input type="text" id="aadhaar" name="aadhaar" placeholder="Enter Your Aadhaar Number">
+
+    <button onclick=aadhaarVerify()>Verify</button>
+    <p id="output"></p>
+
+    <script>
+        function aadhaarVerify(){
+            const aadhaarInput = document.getElementById("aadhaar").value;
+            // const aadhaarRegex = /^[2-9]\d{11}$/;
+            const aadhaarRegex = /^\d{12}$/;
+
+            if(!aadhaarRegex.test(aadhaarInput)){
+                document.getElementById("output").innerHTML="Invalid Aadhaar Number";
+                document.getElementById("output").style.color="red";
+            }
+            else{
+                document.getElementById("output").innerHTML="Valid Aadhaar Number";
+                document.getElementById("output").style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

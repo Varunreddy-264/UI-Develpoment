@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <!-- 
+        In react there are two concepts they are class based components(USED LESS OFTEN),
+        and function based components.
+        Functions:
+            -A JavaScript function is a block of code designed to perform a particular task.
+             A JavaScript function is executed when "something" invokes it (calls it).
+
+        Syntax: 
+                function function_name(parameter1, parameters2){
+                    //Function Logic
+                }function_name(value1,value2 (values should be given to the parameters if they are passed));
+
+        TYPES OF FUNCTIONS:
+                - Function without paramenters
+                - Function with paramenters
+                - Function with return statement
+                - Function with default parameters
+                - Named function/ Function with a name
+                - Anonymous Function/ Function without a name***
+                - Variable Function***
+                - Callback Function***
+                - Nested Function
+                - Recursive Function - IDIOT FUNCTION
+                - IIFE (Immediately Invoked Function Expression)
+                - ES6+ Component
+                    - Arrow Function*****
+
+
+     -->
+     <script>
+            function greet(){
+                console.log("Good Morning");
+            }greet();
+
+        // Manual Function where values are declared to a variable everytime.
+        // -->FUNCTION WITHOUT PARAMETERS:
+        // CALCULATE GST
+            function gstCal(){
+                let price = 1000;
+                let gstPer = 15;
+                let totalPrice = price + (price*gstPer/100);
+                console.log(totalPrice);
+            }gstCal();
+        
+        // Flexible Function where values can be passed as arguments to parameters.
+        // -->FUNCTION WITH PARAMETERS:
+        // CALCULATE GST
+            function gst(price,gstPercentage){
+                let total=price+(price*gstPercentage/100);
+                console.log(total);
+            }gst(500,14);
+
+        // ADD 3 NUMBERS
+            function sum(a,b,c){
+                let add = a+b+c;
+                console.log(add);
+            }sum(43,562,289);
+
+        // -->FUNCTION WITH RETURN STATEMENT:
+            function gstCal(price,gst){
+                let total=price+(price*gst/100);
+                return total;
+            }
+            let a=gstCal(1000,10);
+            console.log(a);
+
+            function sum(a,b,c){
+                let add=a+b+c;
+                return add;
+            }
+            let total=sum(3,6,8);
+            console.log(total);
+
+        // -->FUNCTION WITH DEFAULT PARAMETERS:
+            function gstcal(p,gp=12){
+                let tp=p+(p*gp/100);
+                console.log(tp);
+            }gstcal(1000);
+            gstcal(7400);
+            gstcal(5200);
+        
+
+        // -->ANONYMOUS FUNCTION:
+            // setTimeout(function add(a=2,b=3,c=4,d=5){
+            //     let sum=a+b+c+d;
+            //     console.log(sum);
+            // })    
+
+            // setTimeout(function (p=1000,gp=10){
+            //     let tp=p+(p*gp/100);
+            //     console.log(tp);
+            // })
+
+        // FILTER METHOD AND ANONYMOUS FUNCTION:
+            var numbers=[1,2,3,4,5,6,7,8,9]
+            var even=numbers.filter(function(n){
+                return n%2==0;
+            });
+            console.log(even);
+
+            var num=[1,2,3,4,5,5,6,7,89,6,44,563,5665];
+            var odd=num.filter(function(m){
+                return m%2!==0;
+            });
+            console.log(odd);
+
+        // VARIABLE FUNCTION:
+            var si=function(p,r,t){
+                return (p*r*t)/100;
+            }
+            console.log(si(10000,20,4));
+
+            // var greet=function(){
+            //     console.log("Hello, Good Morning");
+            // }
+            // setTimeout(greet);
+            
+
+        // CALLBACK FUNCTION:
+
+        function evening(greet,){
+            console.log("Good Evening");
+            greet();
+        }
+        function hello(){
+            console.log("Hello All");
+        }
+        evening(hello);
+        
+        // NESTED FUNCTION:
+
+        function outer(){
+            let outside = "Iam Outside";
+
+            function inner(){
+                console.log(outside);
+            }inner();
+
+        }outer();
+
+        // RECURSIVE FUNCTION:
+
+        function factorial(n){
+            if(n===0){
+                return 1;
+            }else{
+                return n * factorial(n-1);
+            }
+        }console.log(factorial(5));
+
+        // IIFE:
+
+        (function(){
+            console.log("Good Night");
+        })()
+
+        // ARROW FUNCTION:
+
+        let greetings=()=>{console.log("GOOD NIGHT");}
+        greetings();
+
+        let multiply=(x,y,z)=>{return x*y*z}
+        console.log(multiply(1,2,3));
+        
+
+
+
+     </script>
+</body>
+</html>

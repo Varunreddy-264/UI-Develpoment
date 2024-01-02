@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Coidng</title>
+</head>
+<body>
+    <label for="mobile">Mobile No:</label>
+    <input type="text" id="mobile" name="mobile" placeholder="Enter Your Mobile Number">
+
+    <button onclick="validateMobile()">Verify</button>
+    <p id="output"></p>
+
+    <script>
+        function validateMobile(){
+            const mobileInput = document.getElementById("mobile").value;
+            const mobileRegex = /^[6-9]\d{9}$/;
+
+            if(!mobileRegex.test(mobileInput)){
+                document.getElementById("output").innerHTML="Invalid Mobile Number";
+                document.getElementById("output").style.color="red";
+            }
+            else{
+                document.getElementById("output").innerHTML="Valid Mobile Number";
+                document.getElementById("output").style.color="green";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching image API</title>
+    <style>
+        div{
+            border: 1px solid black;
+            height: 300px;
+            width: 300px;
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        section{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Fetching image API and present in table:
+     -->
+     <h1>Fetching Image API</h1>
+     <button id="buttonClick">Fetch Now</button>
+
+     <section>
+        <div><img class="image"></div>
+        <div><img class="image"></div>
+        <div><img class="image"></div>        
+        <div><img class="image"></div>        
+
+     </section>
+
+     <script>
+        
+        let image=document.getElementsByClassName("image");
+        let btn = document.getElementById("buttonClick");
+
+        btn.addEventListener("click",()=>{
+            for(let i=0;i<4;i++){
+                fetch("https://dog.ceo/api/breeds/image/random")
+                .then(res=>res.json())
+                .then(data=>{
+                    image[i].src=data.message;
+                })
+            }
+        })
+
+
+
+
+     </script>
+
+
+</body>
+</html>

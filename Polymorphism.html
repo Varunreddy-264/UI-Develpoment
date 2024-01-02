@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        POLYMORPHISM:
+     -->
+    <script>
+
+        //METHOD OVERRIDING:
+
+        class Animal{
+            speak(){
+                console.log("Animals can speak");
+            }
+        }
+        class dog extends Animal{
+            speak(){
+                console.log("Dog can bark");
+            }
+        }
+        class cat extends Animal{
+            speak(){
+                console.log("Cat can meow");
+            }
+        }
+        class cow extends Animal{
+            speak(){
+                console.log("Cow can moo");
+            }
+        }
+
+        let animal = new Animal();
+        let d = new dog();
+        let c = new cat();
+        let coW = new cow();
+
+        animal.speak();
+        d.speak();
+        c.speak();
+        coW.speak();
+
+        // METHOD OVERLOADING:
+
+        class calculate{
+            add(){
+                if(arguments.length === 2){
+                    console.log(arguments[0] + arguments[1]);
+                }
+                else if(arguments.length === 3){
+                    console.log(arguments[0] + arguments[1] + arguments[2]);
+                }
+                else if(arguments.length === 4){
+                    console.log(arguments[0] + arguments[1] + arguments[2] + arguments[3]);
+                }
+                else{
+                    console.log("Invalid no.of Arguments");
+                }
+            }
+        }
+
+        let calc = new calculate();
+
+        calc.add(1,5,7,9);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

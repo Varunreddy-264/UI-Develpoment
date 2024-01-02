@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- Events in JS:
+            -Mouse:
+                -click - Used 99% in practical
+                -double click
+                -mouse down - works when button is clicked but not released
+                -mouse up - works when button in clicked and particularly released
+                -mouse enter - same like hover works when the mouse pointer is hovered on the element 
+                -mouse leave - opposite to mouse enter, works when mouse pointer leaves the hovering on an element
+                -mouse move
+                -contextmenu - right button clicked on mouse
+
+            -Keyboard:
+                -keydown
+                -keyup
+                -keypress
+                -keydown with modifiers
+
+    
+    
+    
+    
+    
+    
+    -->
+    <form>
+        <input type="button" name="my-button" value="Login Now" id="my-button">
+    </form>
+    <script>
+        // CLICK EVENT: we can use different selectors
+
+        // let myButton=document.getElementById("my-button")
+        // myButton=addEventListener('click',function(){
+        //     alert("Login Successful");
+        // })
+
+        // document.getElementById("my-button").addEventListener("click",()=>{
+        //     alert("Button Single Clicked");
+        // })
+        
+        // // DOUBLE CLICK EVENT:
+        // document.querySelector("#my-button").addEventListener("dblclick",()=>{
+        //     alert("Button Double Clicked");
+        // })
+
+        // MOUSE DOWN EVENT:
+        // document.getElementById("my-button").addEventListener("mousedown",()=>{
+        //     alert("Mouse Down");
+        // })
+
+        // MOUSE UP EVENT:
+        // document.getElementById("my-button").addEventListener("mouseup",()=>{
+        //     alert("Mouse Up");
+        // })
+
+        // MOUSE ENTERED EVENT:
+        // document.getElementById("my-button").addEventListener("mouseenter",()=>{
+        //     alert("Mouse Entered");
+        // })
+
+        // MOUSE LEAVE EVENT:
+        // document.getElementById("my-button").addEventListener("mouseleave",()=>{
+        //     alert("Mouse Leave");
+        // })
+
+        // MOUSE MOVE EVENT:
+        // document.getElementById("my-button").addEventListener("mousemove",()=>{
+        //     alert("Mouse Move");
+        // })
+
+        // CONTEXT MENU:
+        document.getElementById("my-button").addEventListener("contextmenu",()=>{
+            alert("Mouse Right Button Clicked");
+        })
+
+        // KEYBOARD EVENTS:
+
+        // KEYDOWN EVENT:
+        // document.addEventListener("keydown",()=>{
+        //     alert("Key Down Pressed");
+        // })
+
+        // STRING INTERPOLATION:
+        // syntax: `${expressions}`
+
+        let name = "Varun";
+        let age = 20;
+
+        console.log("My name is "+name+" and i am "+age+ " years old");
+
+        // Using string interpolation or backtick:
+
+        console.log(`My name is ${name} and i am ${age} years old`);
+
+        // we use "key" function to know which key we have pressed:
+        // document.addEventListener("keydown",(event1)=>{
+        //     alert(`key pressed down: ${event1.key}`);
+        // })
+
+        // KEYUP EVENT:
+        // document.addEventListener("keyup",(event2)=>{
+        //     alert(`key pressed up: ${event2.key}`);
+        // })
+
+        // KEY PRESS EVENT:
+        // document.addEventListener("keypress",(event3)=>{
+        //     alert(`key pressed up: ${event3.key}`);
+        // })
+
+        // KEYDOWN WITH MODIFIERS:
+        document.addEventListener("keydown",(event)=>{
+            if(event.key==="Enter"){
+                alert("Enter is pressed");
+            }
+            if(event.ctrlKey && event.key==="c"){
+                alert("Ctrl + "+event.key+ " is pressed")
+            }
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
